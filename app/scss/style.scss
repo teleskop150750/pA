@@ -16,7 +16,7 @@ body {
 
 .header {
   position: fixed;
-  z-index: 100;
+  z-index: 10;
   top: 0;
   height: 72px;
   width: 100%;
@@ -2194,8 +2194,6 @@ main.portfolio {
   }
 
   .content__order {
-    ;
-
     @media (max-width: 700px) {
       margin-top: 50px;
       display: flex;
@@ -2206,6 +2204,7 @@ main.portfolio {
     @media (min-width: 700px) {
       margin-top: 100px;
       display: flex;
+      flex-direction: row;
       justify-content: space-between;
       align-items: center;
     }
