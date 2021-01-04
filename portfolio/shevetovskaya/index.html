@@ -17,7 +17,7 @@
   <header class="header">
     <div class="header__container container">
       <a href="index.html" class="header__logo"><img src="app/images/logo.png"></img></a>
-      <button class="header-button header__button" type="button" aria-label="открыть меню">
+      <button class="header-button" type="button" aria-label="открыть меню">
         <span class="header-button__liner"></span>
       </button>
       <div class="header__menu-wrapp">
@@ -34,7 +34,7 @@
   </header>
 
   <main id="swup" class="transition-fade portfolio">
-    <section class="main" style="background-image: url(../../app/images/portfolio-bg-2.jpg);">
+    <section class="main" style="background-image: url(app/images/portfolio-bg-2.jpg);">
       <div class="main__item">сайт Шеветовская</div>
     </section>
 
@@ -44,25 +44,25 @@
         <div class="content-box">
           <div class="content__item">
             <div class="content__item-img">
-              <img class="svg" src="../../app/images/smile.svg">
+              <img class="svg" src="app/images/smile.svg">
             </div>
             <span> ШЕВЕТОВСКАЯ</span>
           </div>
           <div class="content__item">
             <div class="content__item-img">
-              <img class="svg" src="../../app/images/date.svg">
+              <img class="svg" src="app/images/date.svg">
             </div>
             Не указано
           </div>
           <div class="content__item">
             <div class="content__item-img">
-              <img class="svg" src="../../app/images/party.svg">
+              <img class="svg" src="app/images/party.svg">
             </div>
             День рождение
           </div>
           <div class="content__item">
             <div class="content__item-img">
-              <img class="svg" src="../../app/images/map-mark__portfolio.svg">
+              <img class="svg" src="app/images/map-mark__portfolio.svg">
             </div>
             <span>Не указано</span>
 
@@ -82,11 +82,11 @@
           зал, погруженный в полутьму.
         </div>
         <div class="content__title">Галерея</div>
-        <div class="content__gallery" style="background-image: url(../../app/images/portfolio-bg-2.jpg);">
+        <div class="content__gallery" style="background-image: url(app/images/portfolio-bg-2.jpg);">
           <div class="content__gallery-span"></div>
           <div class="content__gallery-box">
             <div class="content__gallery-img">
-              <img src="../../app/images/cursor-click.svg" alt="">
+              <img src="app/images/cursor-click.svg" alt="">
             </div>
             <div class="content__gallery-title">нажмите, чтобы посмотреть, как это было</div>
           </div>
@@ -103,9 +103,9 @@
           <div class="content__order-box">
             <span>Поделиться:</span>
             <div class="content__order-social">
-              <a target="_blank" href="#"><img class="svg" src="../../app/images/instagram.svg"></a>
-              <a target="_blank" href="#"><img class="svg" src="../../app/images/facebook.svg"></a>
-              <a target="_blank" href="#"><img class="svg" src="../../app/images/youtube.svg"></a>
+              <a target="_blank" href="#"><img class="svg" src="app/images/instagram.svg"></a>
+              <a target="_blank" href="#"><img class="svg" src="app/images/facebook.svg"></a>
+              <a target="_blank" href="#"><img class="svg" src="app/images/youtube.svg"></a>
             </div>
           </div>
         </div>
@@ -133,12 +133,12 @@
         <span>Все права защищены</span>
       </div>
 
-      <div class="footer__title"><span>задизайнено в</span><img src="../../app/images/solcore.png"></div>
+      <div class="footer__title"><span>задизайнено в</span><img src="app/images/solcore.png"></div>
 
       <div class="footer__social default-social">
-        <a target="_blank" href="#"><img class="svg" src="../../app/images/instagram.svg"></a>
-        <a target="_blank" href="#"><img class="svg" src="../../app/images/facebook.svg"></a>
-        <a target="_blank" href="#"><img class="svg" src="../../app/images/youtube.svg"></a>
+        <a target="_blank" href="#"><img class="svg" src="app/images/instagram.svg"></a>
+        <a target="_blank" href="#"><img class="svg" src="app/images/facebook.svg"></a>
+        <a target="_blank" href="#"><img class="svg" src="app/images/youtube.svg"></a>
       </div>
     </div>
   </footer>
@@ -188,9 +188,10 @@
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="../../app/js/libs.min.js"></script>
-  <script src="../../app/js/main.js"></script>
+  <script src="app/js/libs.min.js"></script>
+  <script src="app/js/main.js"></script>
   <script>
+
 
     let camera, scene, renderer, geometry, material, mesh, renderObject, allObject;
     init();
@@ -278,7 +279,7 @@
           new THREE.MeshBasicMaterial({ color: 0x242424, flatShading: true }),
           new THREE.MeshBasicMaterial({ color: 0x242424, flatShading: true }),
           new THREE.MeshBasicMaterial({ color: 0x242424, flatShading: true }),
-          new THREE.MeshBasicMaterial({ map: loader.load('./../../app/images/shevetovskaya/' + iterator.nameImg) }),
+          new THREE.MeshBasicMaterial({ map: loader.load('app/images/shevetovskaya/' + iterator.nameImg) }),
           new THREE.MeshBasicMaterial({ color: 0x242424, flatShading: true }),
         ];
         mesh = new THREE.Mesh(geometry, materials);
@@ -297,7 +298,7 @@
         new THREE.MeshBasicMaterial({ color: 0x242424, flatShading: true }),
         new THREE.MeshBasicMaterial({ color: 0x242424, flatShading: true }),
         new THREE.MeshBasicMaterial({ color: 0x242424, flatShading: true }),
-        new THREE.MeshBasicMaterial({ map: loader.load('./../../app/images/shevetovskaya/SSH_0412.jpg') }),
+        new THREE.MeshBasicMaterial({ map: loader.load('app/images/shevetovskaya/SSH_0412.jpg') }),
         new THREE.MeshBasicMaterial({ color: 0x242424, flatShading: true }),
       ];
       mesh = new THREE.Mesh(geometry, materials);
@@ -316,7 +317,7 @@
     }
 
   </script>
-  <script src="../../app/js/three-script.js"></script>
+  <script src="app/js/three-script.js"></script>
 </body>
 
 </html>

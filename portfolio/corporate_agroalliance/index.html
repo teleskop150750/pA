@@ -2,6 +2,7 @@
 <html lang="ru">
 
 <head>
+  <base href="/">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -9,26 +10,31 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="../../app/css/style.min.css">
+    <link rel="stylesheet" href="app/scss/style.css">
 </head>
 
 <body>
   <header class="header">
-    <div class="container">
-      <a href="../../" class="header__logo"><img src="../../app/images/logo.png"></img></a>
-      <ul class="header__menu">
-        <li class="scroll-btn" data-onScroll=".about">О нас</li>
-        <li class="scroll-btn" data-onScroll=".portfolio">Портфолио</li>
-        <li class="scroll-btn" data-onScroll=".events">Мероприятия</li>
-        <li class="scroll-btn" data-onScroll=".services">Услуги</li>
-        <li class="scroll-btn" data-onScroll=".window">Курсы</li>
-        <li class="scroll-btn" data-onScroll=".map">Контакты</li>
-      </ul>
+    <div class="header__container container">
+      <a href="index.html" class="header__logo"><img src="app/images/logo.png"></img></a>
+      <button class="header-button" type="button" aria-label="открыть меню">
+        <span class="header-button__liner"></span>
+      </button>
+      <div class="header__menu-wrapp">
+        <ul class="header__menu">
+          <li class="scroll-btn" data-onScroll=".about">О нас</li>
+          <li class="scroll-btn" data-onScroll=".portfolio">Портфолио</li>
+          <li class="scroll-btn" data-onScroll=".events">Мероприятия</li>
+          <li class="scroll-btn" data-onScroll=".services">Услуги</li>
+          <li class="scroll-btn" data-onScroll=".window">Курсы</li>
+          <li class="scroll-btn" data-onScroll=".map">Контакты</li>
+        </ul>
+      </div>
     </div>
   </header>
 
   <main id="swup" class="transition-fade portfolio">
-    <section class="main" style="background-image: url(../../app/images/portfolio-bg-5.jpg);">
+    <section class="main" style="background-image: url(app/images/portfolio-bg-5.jpg);">
       <div class="main__item">агроальянс</div>
     </section>
 
@@ -36,33 +42,30 @@
       <div class="container">
         <div class="content__title">Про событие</div>
         <div class="content-box">
-          <div class="content-inner">
-            <div class="content__item">
-              <div class="content__item-img">
-                <img class="svg" src="../../app/images/smile.svg">
-              </div>
-              АГРОАЛЬЯНС
+          <div class="content__item">
+            <div class="content__item-img">
+              <img class="svg" src="app/images/smile.svg">
             </div>
-            <div class="content__item">
-              <div class="content__item-img">
-                <img class="svg" src="../../app/images/party.svg">
-              </div>
-              Корпоратив
-            </div>
+            <span> ШЕВЕТОВСКАЯ</span>
           </div>
-          <div class="content-inner">
-            <div class="content__item">
-              <div class="content__item-img">
-                <img class="svg" src="../../app/images/date.svg">
-              </div>
-              Не указано
+          <div class="content__item">
+            <div class="content__item-img">
+              <img class="svg" src="app/images/date.svg">
             </div>
-            <div class="content__item">
-              <div class="content__item-img">
-                <img class="svg" src="../../app/images/map-mark__portfolio.svg">
-              </div>
-              Не указано
+            Не указано
+          </div>
+          <div class="content__item">
+            <div class="content__item-img">
+              <img class="svg" src="app/images/party.svg">
             </div>
+            День рождение
+          </div>
+          <div class="content__item">
+            <div class="content__item-img">
+              <img class="svg" src="app/images/map-mark__portfolio.svg">
+            </div>
+            <span>Не указано</span>
+
           </div>
         </div>
 
@@ -79,10 +82,11 @@
           музыкой.
         </div>
         <div class="content__title">Галерея</div>
-        <div class="content__gallery" style="background-image: url(../../app/images/portfolio-bg-5.jpg);">
+        <div class="content__gallery" style="background-image: url(app/images/portfolio-bg-5.jpg);">
+          <div class="content__gallery-span"></div>
           <div class="content__gallery-box">
             <div class="content__gallery-img">
-              <img src="../../app/images/cursor-click.svg" alt="">
+              <img src="app/images/cursor-click.svg" alt="">
             </div>
             <div class="content__gallery-title">нажмите, чтобы посмотреть, как это было</div>
           </div>
@@ -99,9 +103,9 @@
           <div class="content__order-box">
             <span>Поделиться:</span>
             <div class="content__order-social">
-              <a target="_blank" href="#"><img class="svg" src="../../app/images/instagram.svg"></a>
-              <a target="_blank" href="#"><img class="svg" src="../../app/images/facebook.svg"></a>
-              <a target="_blank" href="#"><img class="svg" src="../../app/images/youtube.svg"></a>
+              <a target="_blank" href="#"><img class="svg" src="app/images/instagram.svg"></a>
+              <a target="_blank" href="#"><img class="svg" src="app/images/facebook.svg"></a>
+              <a target="_blank" href="#"><img class="svg" src="app/images/youtube.svg"></a>
             </div>
           </div>
         </div>
@@ -129,12 +133,12 @@
         <span>Все права защищены</span>
       </div>
 
-      <div class="footer__title"><span>задизайнено в</span><img src="../../app/images/solcore.png"></div>
+      <div class="footer__title"><span>задизайнено в</span><img src="app/images/solcore.png"></div>
 
       <div class="footer__social default-social">
-        <a target="_blank" href="#"><img class="svg" src="../../app/images/instagram.svg"></a>
-        <a target="_blank" href="#"><img class="svg" src="../../app/images/facebook.svg"></a>
-        <a target="_blank" href="#"><img class="svg" src="../../app/images/youtube.svg"></a>
+        <a target="_blank" href="#"><img class="svg" src="app/images/instagram.svg"></a>
+        <a target="_blank" href="#"><img class="svg" src="app/images/facebook.svg"></a>
+        <a target="_blank" href="#"><img class="svg" src="app/images/youtube.svg"></a>
       </div>
     </div>
   </footer>
@@ -184,8 +188,8 @@
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="../../app/js/libs.min.js"></script>
-  <script src="../../app/js/main.js"></script>
+  <script src="app/js/libs.min.js"></script>
+  <script src="app/js/main.js"></script>
   <script>
 
     let camera, scene, renderer, geometry, material, mesh, renderObject, allObject;
@@ -287,7 +291,7 @@
           new THREE.MeshBasicMaterial({ color: 0x242424, flatShading: true }),
           new THREE.MeshBasicMaterial({ color: 0x242424, flatShading: true }),
           new THREE.MeshBasicMaterial({ color: 0x242424, flatShading: true }),
-          new THREE.MeshBasicMaterial({ map: loader.load('./../../app/images/corporate_agroalliance/' + iterator.nameImg) }),
+          new THREE.MeshBasicMaterial({ map: loader.load('app/images/corporate_agroalliance/' + iterator.nameImg) }),
           new THREE.MeshBasicMaterial({ color: 0x242424, flatShading: true }),
         ];
         mesh = new THREE.Mesh(geometry, materials);
@@ -330,7 +334,7 @@
           new THREE.MeshBasicMaterial({ color: 0x242424, flatShading: true }),
           new THREE.MeshBasicMaterial({ color: 0x242424, flatShading: true }),
           new THREE.MeshBasicMaterial({ color: 0x242424, flatShading: true }),
-          new THREE.MeshBasicMaterial({ map: loader.load('./../../app/images/corporate_agroalliance/' + iterator.nameImg) }),
+          new THREE.MeshBasicMaterial({ map: loader.load('app/images/corporate_agroalliance/' + iterator.nameImg) }),
           new THREE.MeshBasicMaterial({ color: 0x242424, flatShading: true }),
         ];
         mesh = new THREE.Mesh(geometry, materials);
@@ -353,7 +357,7 @@
     }
 
   </script>
-  <script src="../../app/js/three-script.js"></script>
+  <script src="app/js/three-script.js"></script>
 </body>
 
 </html>

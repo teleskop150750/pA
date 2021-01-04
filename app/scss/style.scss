@@ -444,7 +444,7 @@ main.home {
 
     & .container--about {
       position: relative;
-      z-index: 20;
+      z-index: 8;
     }
   }
 
@@ -2220,11 +2220,11 @@ main.portfolio {
     @media (max-width: 700px) {
       padding: 16px 20px;
     }
-    
+
     @media (min-width: 700px) and (max-width: 1000px) {
       padding: 20px 24px;
     }
-    
+
     @media (min-width: 1000px) {
       padding: 25px 28px;
     }
@@ -2240,12 +2240,12 @@ main.portfolio {
         font-size: 18px;
         line-height: 1.2;
       }
-      
+
       @media (min-width: 700px) and (max-width: 1000px) {
         font-size: 28px;
         line-height: 30px;
       }
-      
+
       @media (min-width: 1000px) {
         font-size: 28px;
         line-height: 30px;
@@ -2436,12 +2436,23 @@ body.active {
 
 main.services {
   .services-bg {
-    padding: 175px 0 75px;
     color: #fff;
     position: relative;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+
+    @media (max-width: 700px) {
+      padding: 80px 0 30px;
+    }
+
+    @media (min-width: 700px) and (max-width: 1000px) {
+      padding: 155px 0 65px;
+    }
+
+    @media (min-width: 1000px) {
+      padding: 175px 0 75px;
+    }
 
     svg {
       animation: arrowAnim 1s infinite ease-in-out;
@@ -2471,8 +2482,34 @@ main.services {
     position: relative;
     z-index: 1;
 
+    @media (max-width: 700px) {
+      font-size: 56px;
+      line-height: 1.2;
+    }
+
+    @media (min-width: 700px) and (max-width: 1000px) {
+      font-size: 76px;
+      line-height: 1.2;
+    }
+
+    @media (min-width: 1000px) {
+      font-size: 96px;
+      line-height: 117px;
+    }
+
     &.padding-title {
-      padding-bottom: 223px;
+
+      @media (max-width: 700px) {
+        padding-bottom: 150px;
+      }
+
+      @media (min-width: 700px) and (max-width: 1000px) {
+        padding-bottom: 200px;
+      }
+
+      @media (min-width: 1000px) {
+        padding-bottom: 223px;
+      }
     }
   }
 
@@ -2481,23 +2518,42 @@ main.services {
     font-weight: 500;
     font-size: 24px;
     line-height: 29px;
-    padding: 25px 0 140px;
     // max-width: 500px;
     margin: 0 auto;
     position: relative;
     z-index: 1;
+
+    @media (max-width: 700px) {
+      padding: 25px 0 80px;
+    }
+
+    @media (min-width: 700px) and (max-width: 1000px) {
+      padding: 25px 0 120px;
+    }
+
+    @media (min-width: 1000px) {
+      padding: 25px 0 140px;
+    }
   }
 
   .services__links {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     max-width: 1140px;
     padding: 0 15px;
     margin: 0 auto;
     margin-bottom: 58px;
     position: relative;
     z-index: 1;
+
+    @media (max-width: 700px) {
+      display: grid;
+      gap: 20px;
+    }
+
+    @media (min-width: 700px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 
   .services__links-item {
@@ -2565,6 +2621,18 @@ main.services {
 
   .services-item {
     padding-top: 130px;
+
+    @media (max-width: 700px) {
+      padding-top: 80px;
+    }
+
+    @media (min-width: 700px) and (max-width: 1000px) {
+      padding-top: 110px;
+    }
+
+    @media (min-width: 1000px) {
+      padding-top: 130px;
+    }
   }
 
   .main__title {
@@ -2572,6 +2640,21 @@ main.services {
     font-size: 64px;
     line-height: 58px;
     text-align: center;
+
+    @media (max-width: 700px) {
+      font-size: 34px;
+      line-height: 1;
+    }
+
+    @media (min-width: 700px) and (max-width: 1000px) {
+      font-size: 50px;
+      line-height: 1;
+    }
+
+    @media (min-width: 1000px) {
+      font-size: 64px;
+      line-height: 58px;
+    }
   }
 
   .main__content {
@@ -2583,12 +2666,42 @@ main.services {
     font-size: 36px;
     line-height: 46px;
     padding-bottom: 20px;
+
+    @media (max-width: 700px) {
+      font-size: 22px;
+      line-height: 1.2;
+    }
+
+    @media (min-width: 700px) and (max-width: 1000px) {
+      font-size: 30px;
+      line-height: 1.2;
+    }
+
+    @media (min-width: 1000px) {
+      font-size: 36px;
+      line-height: 46px;
+    }
   }
 
   .main__content-text {
     font-weight: 500;
     font-size: 24px;
     line-height: 32px;
+
+    @media (max-width: 700px) {
+      font-size: 18px;
+      line-height: 1.2;
+    }
+
+    @media (min-width: 700px) and (max-width: 1000px) {
+      font-size: 22px;
+      line-height: 1.2;
+    }
+
+    @media (min-width: 1000px) {
+      font-size: 24px;
+      line-height: 32px;
+    }
   }
 
   .main__content-btn {
@@ -2605,28 +2718,87 @@ main.services {
   }
 
   .main__img {
-    width: 422px;
+    display: block;
+    width: 100%;
+    max-width: 422px;
     border-radius: 40px;
+
+    @media (max-width: 800px) {
+      justify-self: center;
+    }
   }
 
   .main-box {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding-top: 75px;
+    display: grid;
+    gap: 20px;
+
+    @media (max-width: 800px) {
+      padding-top: 45px;
+    }
+
+    @media (min-width: 800px) and (max-width: 1000px) {
+      grid-template-columns: 1fr minmax(280px, 420px);
+      padding-top: 65px;
+    }
+
+    @media (min-width: 1000px) {
+      grid-template-columns: 1fr minmax(280px, 420px);
+      ;
+      padding-top: 75px;
+    }
   }
 
   .tasks {
     padding-top: 75px;
+    display: none;
 
     .container {
-      display: flex;
-      justify-content: center;
+      // display: flex;
+      // justify-content: center;
+
+      @media (max-width: 800px) {}
+
+      @media (min-width: 700px) and (max-width: 1000px) {
+
+        column-count: 2;
+      }
+
+      @media (min-width: 1000px) {
+
+        column-count: 3;
+      }
+    }
+  }
+
+  @media (max-width: 700px) {
+    .tasks-1 {
+      display: block;
+    }
+  }
+
+  @media (min-width: 700px) and (max-width: 1000px) {
+    .tasks-1 {
+      display: none;
     }
 
-    .container+.container {
-      padding-top: 30px;
+    .tasks-2 {
+      display: block;
     }
+  }
+
+  @media (min-width: 1000px) {
+    .tasks-2 {
+      display: none;
+    }
+
+    .tasks-3 {
+      display: block;
+    }
+  }
+
+  .container+.container {
+    padding-top: 30px;
   }
 
   .tasks__text {
@@ -2678,6 +2850,7 @@ main.services {
     background: linear-gradient(331.2deg, #5753c9 0.76%, #6e7ff3 100%);
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
     border-radius: 30px;
+    break-inside: avoid;
   }
 
   .tasks__item+.tasks__item {
@@ -2730,6 +2903,21 @@ main.services {
     font-weight: 700;
     font-size: 36px;
     line-height: 32px;
+
+    @media (max-width: 700px) {
+      font-size: 24px;
+      line-height: 1.1;
+    }
+
+    @media (min-width: 700px) and (max-width: 1000px) {
+      font-size: 32px;
+      line-height: 1.1;
+    }
+
+    @media (min-width: 1000px) {
+      font-size: 36px;
+      line-height: 32px;
+    }
   }
 
   .form-inner {
@@ -2771,5 +2959,3 @@ main.services {
     cursor: pointer;
   }
 }
-
-@import "media";

@@ -1,18 +1,16 @@
-const headerButton = document.querySelector('.header-button');
-const headerMenuWrapp  = document.querySelector('.header__menu-wrapp');
-console.log(headerButton);
-
-headerButton.addEventListener('click', function () {
-    headerButton.classList.toggle('header-button--active');
-    headerMenuWrapp.classList.toggle('header__menu-wrapp--active');
-});
-
-
 $(function () {
+    const headerButton = document.querySelector('.header-button');
+    const headerMenuWrapp = document.querySelector('.header__menu-wrapp');
 
+    headerButton.addEventListener('click', function () {
+        headerButton.classList.toggle('header-button--active');
+        headerMenuWrapp.classList.toggle('header__menu-wrapp--active');
+    });
     $("#phone").mask("+7(999) 999-99-99");
 
     $('.scroll-btn').on('click', function (e) {
+        headerButton.classList.remove('header-button--active');
+        headerMenuWrapp.classList.remove('header__menu-wrapp--active');
         objectSelect = $(this).attr('data-onScroll');
 
         if ($(this).parent().hasClass('header__menu')) {
@@ -92,6 +90,8 @@ $(function () {
         })
     })
 
+
+
     var wow = new WOW();
     wow.init();
 
@@ -105,7 +105,7 @@ $(function () {
         function scroll() {
             let scroll = $(this).scrollTop();
             let scrollInSection = scroll + $(this).height() / 2 - $('.why__box').offset().top;
-            
+
 
             if (scrollInSection >= 0) {
                 $('.why__box-dot').fadeIn();

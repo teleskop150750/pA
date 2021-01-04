@@ -3935,7 +3935,7 @@ body {
 
 .header {
   position: fixed;
-  z-index: 100;
+  z-index: 10;
   top: 0;
   height: 72px;
   width: 100%;
@@ -4476,7 +4476,7 @@ main.home .about {
 
 main.home .about .container--about {
   position: relative;
-  z-index: 20;
+  z-index: 8;
 }
 
 main.home .about-box {
@@ -6490,6 +6490,10 @@ main.portfolio .content__text {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -6752,12 +6756,29 @@ body.active::before {
 }
 
 main.services .services-bg {
-  padding: 175px 0 75px;
   color: #fff;
   position: relative;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+@media (max-width: 700px) {
+  main.services .services-bg {
+    padding: 80px 0 30px;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1000px) {
+  main.services .services-bg {
+    padding: 155px 0 65px;
+  }
+}
+
+@media (min-width: 1000px) {
+  main.services .services-bg {
+    padding: 175px 0 75px;
+  }
 }
 
 main.services .services-bg svg {
@@ -6789,8 +6810,43 @@ main.services .services__title {
   z-index: 1;
 }
 
-main.services .services__title.padding-title {
-  padding-bottom: 223px;
+@media (max-width: 700px) {
+  main.services .services__title {
+    font-size: 56px;
+    line-height: 1.2;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1000px) {
+  main.services .services__title {
+    font-size: 76px;
+    line-height: 1.2;
+  }
+}
+
+@media (min-width: 1000px) {
+  main.services .services__title {
+    font-size: 96px;
+    line-height: 117px;
+  }
+}
+
+@media (max-width: 700px) {
+  main.services .services__title.padding-title {
+    padding-bottom: 150px;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1000px) {
+  main.services .services__title.padding-title {
+    padding-bottom: 200px;
+  }
+}
+
+@media (min-width: 1000px) {
+  main.services .services__title.padding-title {
+    padding-bottom: 223px;
+  }
 }
 
 main.services .services__subtitle {
@@ -6798,28 +6854,58 @@ main.services .services__subtitle {
   font-weight: 500;
   font-size: 24px;
   line-height: 29px;
-  padding: 25px 0 140px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
 }
 
+@media (max-width: 700px) {
+  main.services .services__subtitle {
+    padding: 25px 0 80px;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1000px) {
+  main.services .services__subtitle {
+    padding: 25px 0 120px;
+  }
+}
+
+@media (min-width: 1000px) {
+  main.services .services__subtitle {
+    padding: 25px 0 140px;
+  }
+}
+
 main.services .services__links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   max-width: 1140px;
   padding: 0 15px;
   margin: 0 auto;
   margin-bottom: 58px;
   position: relative;
   z-index: 1;
+}
+
+@media (max-width: 700px) {
+  main.services .services__links {
+    display: -ms-grid;
+    display: grid;
+    gap: 20px;
+  }
+}
+
+@media (min-width: 700px) {
+  main.services .services__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 main.services .services__links-item {
@@ -6906,11 +6992,50 @@ main.services .services-item {
   padding-top: 130px;
 }
 
+@media (max-width: 700px) {
+  main.services .services-item {
+    padding-top: 80px;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1000px) {
+  main.services .services-item {
+    padding-top: 110px;
+  }
+}
+
+@media (min-width: 1000px) {
+  main.services .services-item {
+    padding-top: 130px;
+  }
+}
+
 main.services .main__title {
   font-weight: 800;
   font-size: 64px;
   line-height: 58px;
   text-align: center;
+}
+
+@media (max-width: 700px) {
+  main.services .main__title {
+    font-size: 34px;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1000px) {
+  main.services .main__title {
+    font-size: 50px;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 1000px) {
+  main.services .main__title {
+    font-size: 64px;
+    line-height: 58px;
+  }
 }
 
 main.services .main__content {
@@ -6924,10 +7049,52 @@ main.services .main__content-title {
   padding-bottom: 20px;
 }
 
+@media (max-width: 700px) {
+  main.services .main__content-title {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1000px) {
+  main.services .main__content-title {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+}
+
+@media (min-width: 1000px) {
+  main.services .main__content-title {
+    font-size: 36px;
+    line-height: 46px;
+  }
+}
+
 main.services .main__content-text {
   font-weight: 500;
   font-size: 24px;
   line-height: 32px;
+}
+
+@media (max-width: 700px) {
+  main.services .main__content-text {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1000px) {
+  main.services .main__content-text {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+}
+
+@media (min-width: 1000px) {
+  main.services .main__content-text {
+    font-size: 24px;
+    line-height: 32px;
+  }
 }
 
 main.services .main__content-btn {
@@ -6944,35 +7111,92 @@ main.services .main__content-btn {
 }
 
 main.services .main__img {
-  width: 422px;
+  display: block;
+  width: 100%;
+  max-width: 422px;
   border-radius: 40px;
+}
+
+@media (max-width: 800px) {
+  main.services .main__img {
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
 }
 
 main.services .main-box {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-top: 75px;
+  display: -ms-grid;
+  display: grid;
+  gap: 20px;
+}
+
+@media (max-width: 800px) {
+  main.services .main-box {
+    padding-top: 45px;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1000px) {
+  main.services .main-box {
+    -ms-grid-columns: 1fr minmax(280px, 420px);
+        grid-template-columns: 1fr minmax(280px, 420px);
+    padding-top: 65px;
+  }
+}
+
+@media (min-width: 1000px) {
+  main.services .main-box {
+    -ms-grid-columns: 1fr minmax(280px, 420px);
+        grid-template-columns: 1fr minmax(280px, 420px);
+    padding-top: 75px;
+  }
 }
 
 main.services .tasks {
   padding-top: 75px;
+  display: none;
 }
 
-main.services .tasks .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+@media (min-width: 700px) and (max-width: 1000px) {
+  main.services .tasks .container {
+    -webkit-column-count: 2;
+            column-count: 2;
+  }
 }
 
-main.services .tasks .container + .container {
+@media (min-width: 1000px) {
+  main.services .tasks .container {
+    -webkit-column-count: 3;
+            column-count: 3;
+  }
+}
+
+@media (max-width: 700px) {
+  main.services .tasks-1 {
+    display: block;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1000px) {
+  main.services .tasks-1 {
+    display: none;
+  }
+  main.services .tasks-2 {
+    display: block;
+  }
+}
+
+@media (min-width: 1000px) {
+  main.services .tasks-2 {
+    display: none;
+  }
+  main.services .tasks-3 {
+    display: block;
+  }
+}
+
+main.services .container + .container {
   padding-top: 30px;
 }
 
@@ -7026,6 +7250,8 @@ main.services .tasks__item {
   -webkit-box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
+  -webkit-column-break-inside: avoid;
+          break-inside: avoid;
 }
 
 main.services .tasks__item + .tasks__item {
@@ -7079,6 +7305,27 @@ main.services .form__title {
   font-weight: 700;
   font-size: 36px;
   line-height: 32px;
+}
+
+@media (max-width: 700px) {
+  main.services .form__title {
+    font-size: 24px;
+    line-height: 1.1;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1000px) {
+  main.services .form__title {
+    font-size: 32px;
+    line-height: 1.1;
+  }
+}
+
+@media (min-width: 1000px) {
+  main.services .form__title {
+    font-size: 36px;
+    line-height: 32px;
+  }
 }
 
 main.services .form-inner {
