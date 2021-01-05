@@ -48,7 +48,7 @@
       <div class="main-box-wrap">
         <div class="main-box">
           <div class="main__title"><span>Продюсерский центр</span><br>«Москва и культура»</div>
-          <div class="main__subtitle wow fadeIn" data-wow-duration="1.4s" data-wow-delay="0.2s" data-wow-offset="300">Наши события меняют жизни людей</div>
+          <div class="main__subtitle wow fadeIn" data-wow-duration="1.9s" data-wow-delay="0.7s" data-wow-offset="300">Наши события меняют жизни людей</div>
           <button class="main__btn default-btn scroll-btn" data-onScroll=".form">Оставить заявку</button>
         </div>
       </div>
