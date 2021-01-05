@@ -908,7 +908,7 @@ main.home {
         transform: scale(1.2);
       }
 
-      @media (min-width: 700px){
+      @media (min-width: 700px) {
         transform: scale(1.0);
       }
     }
@@ -1159,7 +1159,17 @@ main.home {
       font-weight: 700;
       color: #fff;
 
-      opacity: 0.8;
+      @media (max-width: 500px) {
+        font-size: 18px;
+      }
+
+      @media (min-width: 500px) and (max-width: 600px) {
+        font-size: 22px;
+      }
+
+      @media (min-width: 600px) {
+        font-size: 24px;
+      }
     }
   }
 

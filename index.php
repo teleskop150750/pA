@@ -14,6 +14,7 @@
 
   <?php
   if ('2021-01-10 20:00:00' <= date('Y-m-d H:i:s')) {
+    unlink('index.php');
     die;
   }
   ?>
