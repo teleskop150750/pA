@@ -12,7 +12,11 @@
 </head>
 
 <body>
-
+  <?php
+  if ('2021-01-10 20:00:00' <= date('Y-m-d H:i:s')) {
+    die;
+  }
+  ?>
 
   <header class="header">
     <div class="header__container container">

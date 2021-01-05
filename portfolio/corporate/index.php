@@ -6,12 +6,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Свадьба в Липицке</title>
+  <title>Корпоратив</title>
   <link rel="shortcut icon" href="favicon.png" type="image/png">
   <link rel="stylesheet" href="app/scss/style.css">
 </head>
 
 <body>
+  <?php
+  if ('2021-01-10 20:00:00' <= date('Y-m-d H:i:s')) {
+    die;
+  }
+  ?>
   <header class="header">
     <div class="header__container container">
       <a href="index.html" class="header__logo"><img src="app/images/logo.png"></img></a>
@@ -32,8 +37,8 @@
   </header>
 
   <main id="swup" class="transition-fade portfolio">
-    <section class="main" style="background-image: url(app/images/portfolio-bg-3.jpg);">
-      <div class="main__item">Свадьба в липицке</div>
+    <section class="main" style="background-image: url(app/images/portfolio-bg-1.jpg);">
+      <div class="main__item">корпоратив</div>
     </section>
 
     <section class="content">
@@ -69,17 +74,17 @@
 
         <div class="content__title">Как это было</div>
         <div class="content__text">
-          Для проведения мероприятия было арендовано самое лучшее помещение из всех возможных – свадьба прошла на
-          природе.
+          Мероприятие выполнено в новогоднем стиле.
           <br><br>
-          Гости расположились в просторной светлой беседке, которую декораторы украсили белыми цветами. В глубине
-          беседки расположена сцена, где устроились музыканты, которые развлекали гостей.
+          В качестве декораций были использованы елки с новогодними игрушками, украшения в виде пластов снега. В
+          помещении
+          восстановлена приятная атмосфера веселья, которое не досаждает, а наоборот, расслабляет. Приглашенные ведущие
+          составили интересную программу, которая порадовала как и заказчиков, так и зрителей.
           <br><br>
-          Наши организаторы постарались создать атмосферу весенней свежести, которая прекрасно гармонирует с темой
-          праздником.
+          В ходе мероприятия были проведены конкурсы, например, музыкальный.
         </div>
         <div class="content__title">Галерея</div>
-        <div class="content__gallery" style="background-image: url(app/images/portfolio-bg-3.jpg);">
+        <div class="content__gallery" style="background-image: url(app/images/portfolio-bg-1.jpg);">
           <div class="content__gallery-span"></div>
           <div class="content__gallery-box">
             <div class="content__gallery-img">
@@ -205,43 +210,49 @@
 
       allObject = [
         {
-          nameImg: '220.jpg',
+          nameImg: 'IMG_8128.jpg',
           positionX: 0,
           positionZ: 0,
           rotationY: 0,
           objectClick: true,
         },
         {
-          nameImg: '441.jpg',
+          nameImg: 'IMG_8223.jpg',
           positionX: 1.3,
           positionZ: 0.54,
           rotationY: -Math.PI / 4,
         },
         {
-          nameImg: '216.jpg',
+          nameImg: 'IMG_7463.jpg',
           positionX: -1.3,
           positionZ: 0.54,
           rotationY: Math.PI / 4,
         },
 
         {
-          nameImg: '700.jpg',
-          positionX: -0.245,
-          positionZ: 3.515,
-          rotationY: (5 * Math.PI) / 4,
+          nameImg: 'IMG_8033.jpg',
+          positionX: 0,
+          positionZ: 4,
+          rotationY: Math.PI,
         },
 
         {
-          nameImg: '665.jpg',
+          nameImg: 'IMG_7209.jpg',
           positionX: -4,
           positionZ: 3.5,
           rotationY: Math.PI / 2,
         },
         {
-          nameImg: '707.jpg',
+          nameImg: 'IMG_7213.jpg',
           positionX: -3.46,
           positionZ: 4.8,
           rotationY: (3 * Math.PI) / 4,
+        },
+        {
+          nameImg: 'IMG_7207.jpg',
+          positionX: -3.46,
+          positionZ: 2.2,
+          rotationY: Math.PI / 4,
         },
       ]
 
@@ -253,7 +264,7 @@
           new THREE.MeshBasicMaterial({ color: 0x242424, flatShading: true }),
           new THREE.MeshBasicMaterial({ color: 0x242424, flatShading: true }),
           new THREE.MeshBasicMaterial({ color: 0x242424, flatShading: true }),
-          new THREE.MeshBasicMaterial({ map: loader.load('app/images/wedding_in_lipetsk/' + iterator.nameImg) }),
+          new THREE.MeshBasicMaterial({ map: loader.load('app/images/corporate/' + iterator.nameImg) }),
           new THREE.MeshBasicMaterial({ color: 0x242424, flatShading: true }),
         ];
         mesh = new THREE.Mesh(geometry, materials);
