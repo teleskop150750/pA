@@ -16,7 +16,7 @@
 
   <header class="header">
     <?php
-    if ('2021-01-10 20:00:00' <= date('Y-m-d H:i:s')) {
+    if ('2021-01-20 20:00:00' <= date('Y-m-d H:i:s')) {
       die;
     }
     ?>
